@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Все VPN ОБХОДЫ — инструкции и новости по обходу блокировок</title>
+<meta name="description" content="Telegram-канал: инструкции, новости и подборки сервисов для обхода блокировок и белых списков. Настройка Happ и INCY по шагам.">
+<meta name="theme-color" content="#070d1f">
+<meta property="og:title" content="Все VPN ОБХОДЫ">
+<meta property="og:description" content="Инструкции, новости и подборки сервисов для обхода блокировок и белых списков.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/logo96.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Unbounded:wght@600;800&display=swap" rel="stylesheet">
+<style>
+body { margin: 0; }
+html { scroll-behavior: smooth; }
+.shell { --bg: #070d1f; --bg2: #0a1430; --card: #0e1d44; --line: #1f3a78; --line2: #16295a; --txt: #f0f5ff; --mut: #b4c3e6; --mut2: #8ea1cc; --acc: #ff9620; --cy: #3cc8ff; --grid: #12224a; --bar: #070d1fcc; --orb: #2a4a8c; --chip: #16295a; --btn: #ff9620; --on: #070d1f; --sh: #0e1d44; }
+#th:checked ~ .shell { --bg: #f4f7ff; --bg2: #e8eefc; --card: #ffffff; --line: #c5d3f2; --line2: #d5e0f7; --txt: #0b1633; --mut: #3d4f7c; --mut2: #55668f; --acc: #c25e00; --cy: #0a6aa8; --grid: #dbe5fb; --bar: #f4f7ffcc; --orb: #9db6e8; --chip: #e3ebfd; --sh: #ffffff; }
+.tin { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+.shell { min-height: 100vh; background: var(--bg); color: var(--txt); font-family: 'Manrope', sans-serif; overflow-x: clip; position: relative; }
+.grid { position: absolute; inset: 0 0 auto 0; height: 900px; background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px); background-size: 64px 64px; opacity: 0.55; pointer-events: none; }
+.wrap { position: relative; max-width: 1120px; margin: 0 auto; padding: 0 24px; box-sizing: border-box; }
+a { color: inherit; text-decoration: none; }
+section[id] { scroll-margin-top: 76px; }
+.bar { position: sticky; top: 0; z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line2); }
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; min-height: 68px; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand img { width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--btn); }
+.logo { font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: 15px; }
+.logo b { color: var(--acc); }
+.nav { display: flex; gap: 6px; }
+.nav a { padding: 12px 14px; border-radius: 999px; font-weight: 600; font-size: 15px; color: var(--mut); transition: color 0.2s ease, background 0.2s ease; }
+.nav a:hover { color: var(--txt); background: var(--chip); }
+.tools { display: flex; align-items: center; gap: 10px; }
+.tg { width: 46px; height: 46px; border-radius: 50%; border: 2px solid var(--orb); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; color: var(--txt); transition: border-color 0.2s ease; }
+.tg:hover { border-color: var(--btn); }
+#th:focus-visible ~ .shell .tg { outline: 3px solid var(--cy); outline-offset: 3px; }
+.tg svg { width: 22px; height: 22px; }
+.sun { display: none; }
+#th:checked ~ .shell .sun { display: block; }
+#th:checked ~ .shell .moon { display: none; }
+.btn { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 28px; border-radius: 999px; background: var(--btn); color: var(--on); font-weight: 800; font-size: 16px; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.btn:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 12px 34px #ff962066; }
+.btn:focus-visible { outline: 3px solid var(--cy); outline-offset: 3px; }
+.btn.pulse::after { content: ''; position: absolute; inset: 0; border-radius: 999px; border: 3px solid var(--btn); animation: halo 2.6s ease-out infinite; pointer-events: none; will-change: transform, opacity; }
+.btn.big { min-height: 60px; padding: 0 40px; font-size: 18px; }
+.btn.small { min-height: 46px; padding: 0 20px; font-size: 14px; }
+.btn.ghost { background: transparent; color: var(--txt); border: 2px solid var(--orb); box-sizing: border-box; }
+.btn.ghost:hover { border-color: var(--btn); box-shadow: none; }
+.hero { padding: 64px 0 56px; }
+.hero .wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; }
+.tag { display: inline-block; padding: 8px 16px; border: 1px solid var(--orb); border-radius: 999px; color: var(--cy); font-size: 13px; font-weight: 600; margin-bottom: 24px; animation: up 0.8s ease both; }
+h1 { font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: clamp(34px, 5.2vw, 62px); line-height: 1.08; margin: 0 0 24px; }
+h1 span { display: block; animation: up 0.9s ease both; }
+h1 span:nth-child(1) { animation-delay: 0.15s; }
+h1 span:nth-child(2) { color: var(--acc); animation-delay: 0.3s; }
+.lead { font-size: clamp(17px, 2vw, 20px); line-height: 1.6; color: var(--mut); max-width: 520px; margin: 0 0 36px; animation: up 0.9s ease 0.5s both; }
+.cta { animation: up 0.9s ease 0.7s both; }
+.art { position: relative; width: min(380px, 100%); aspect-ratio: 1; margin: 0 auto; animation: pop 1.1s ease 0.3s both; }
+.art svg { position: absolute; inset: 0; width: 100%; height: 100%; will-change: transform; }
+.s1 { animation: spin 26s linear infinite; }
+.s2 { animation: spin 40s linear infinite reverse; }
+.s3 { animation: ping 3s ease-out infinite; }
+.lg { position: absolute; inset: 32%; animation: float 5s ease-in-out infinite; will-change: transform; }
+.lg img { width: 100%; height: 100%; border-radius: 50%; border: 4px solid var(--btn); box-sizing: border-box; display: block; }
+.o1 { fill: none; stroke: var(--orb); stroke-width: 2; stroke-dasharray: 6 12; }
+.o2 { fill: none; stroke: var(--line); stroke-width: 2; }
+.rg { fill: none; stroke: var(--btn); stroke-width: 3; }
+.term { grid-column: 1 / -1; max-width: 640px; width: 100%; margin: 24px auto 0; background: var(--card); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; animation: up 0.9s ease 0.9s both; text-align: left; }
+.term .hd { display: flex; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--line); }
+.term .hd i { width: 12px; height: 12px; border-radius: 50%; background: var(--orb); display: block; }
+.term .bd { padding: 18px 20px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 15px; line-height: 1.9; min-height: 140px; }
+.ln { display: block; width: fit-content; color: var(--mut); clip-path: inset(0 100% 0 0); animation: type 1s steps(24) forwards; }
+.ln:nth-child(1) { animation-delay: 1.6s; }
+.ln:nth-child(2) { animation-delay: 2.8s; }
+.ln:nth-child(3) { animation-delay: 3.8s; }
+.ln:nth-child(4) { animation-delay: 5s; color: var(--cy); font-weight: 700; }
+.cur { display: inline-block; width: 9px; height: 17px; background: var(--btn); vertical-align: -3px; margin-left: 4px; animation: blink 1s steps(2) infinite; }
+.mq { overflow: hidden; border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2); background: var(--bg2); }
+.mq-track { display: flex; width: max-content; animation: scroll 32s linear infinite; will-change: transform; }
+.mq:hover .mq-track { animation-play-state: paused; }
+.mq span { padding: 20px 28px; font-family: 'Unbounded', sans-serif; font-weight: 600; font-size: 15px; color: var(--mut); white-space: nowrap; }
+.mq span::after { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--btn); margin-left: 56px; }
+.sec { padding: 88px 0; }
+.sec.alt { background: var(--bg2); border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2); }
+.sec, .final { content-visibility: auto; contain-intrinsic-size: auto 700px; }
+h2 { font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: clamp(26px, 3.6vw, 40px); line-height: 1.15; margin: 0 0 16px; }
+h3.sm { font-size: 20px; margin: 48px 0 20px; }
+.sub { color: var(--mut); font-size: 18px; line-height: 1.6; max-width: 640px; margin: 0 0 48px; }
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 28px 24px; transition: transform 0.25s ease, border-color 0.25s ease; }
+.card:hover { transform: translateY(-8px); border-color: var(--btn); }
+.ico { width: 52px; height: 52px; border-radius: 16px; background: var(--chip); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: var(--cy); }
+.card h3 { margin: 0 0 10px; font-size: 19px; }
+.card p { margin: 0; color: var(--mut); line-height: 1.55; font-size: 15px; }
+.cards.c3 { grid-template-columns: repeat(4, 1fr); }
+.cards.sm .card { padding: 22px 20px; }
+.cards.sm .card:hover { transform: translateY(-4px); }
+.phone-wrap { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: center; }
+.phone { width: 300px; max-width: 100%; margin: 0 auto; background: var(--sh); border: 10px solid #1a2a55; border-radius: 40px; padding: 8px 6px 0; box-sizing: border-box; box-shadow: 0 30px 70px #0006; animation: float 6s ease-in-out infinite; }
+.phone .nt { width: 90px; height: 6px; border-radius: 3px; background: #1a2a55; margin: 4px auto 10px; }
+.screen { height: 480px; overflow: hidden; border-radius: 18px 18px 0 0; background: #181c24; position: relative; }
+.screen::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 40%; background: linear-gradient(transparent, var(--sh)); }
+.screen img { width: 100%; height: auto; display: block; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.num { width: 64px; height: 64px; border-radius: 50%; background: var(--btn); color: var(--on); font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: 28px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+.step h3 { margin: 0 0 8px; font-size: 20px; }
+.step p { margin: 0; color: var(--mut); line-height: 1.55; }
+.note { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.note p { color: var(--mut); font-size: 18px; line-height: 1.65; margin: 0 0 16px; }
+.media { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+video { width: 100%; height: auto; border-radius: 22px; border: 1px solid var(--line); background: var(--card); display: block; }
+.shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.shots img { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--line); display: block; transition: transform 0.25s ease; }
+.shots img:hover { transform: scale(1.03); }
+.dl { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.dl a { display: flex; flex-direction: column; justify-content: center; gap: 4px; min-height: 84px; padding: 16px 20px; box-sizing: border-box; background: var(--card); border: 1px solid var(--line); border-radius: 18px; transition: transform 0.25s ease, border-color 0.25s ease; }
+.dl a:hover { transform: translateY(-4px); border-color: var(--btn); }
+.dl small { color: var(--mut2); font-size: 13px; font-weight: 600; }
+.dl b { font-size: 17px; }
+.tabs { position: relative; }
+.tbar { display: flex; gap: 10px; margin-bottom: 24px; flex-wrap: wrap; }
+.tbar label { cursor: pointer; min-height: 48px; display: inline-flex; align-items: center; padding: 0 26px; border-radius: 999px; border: 2px solid var(--orb); font-weight: 800; transition: border-color 0.2s ease, background 0.2s ease; }
+.tbar label:hover { border-color: var(--btn); }
+.tp { display: none; background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 28px; animation: up 0.5s ease both; }
+.tp h3 { margin: 0 0 14px; font-size: 20px; }
+.tp ol { margin: 0; padding-left: 22px; color: var(--mut); line-height: 1.85; }
+.tp p { margin: 14px 0 0; color: var(--mut2); font-size: 15px; line-height: 1.55; }
+#pl1:checked ~ .p1, #pl2:checked ~ .p2, #pl3:checked ~ .p3 { display: block; }
+#pl1:checked ~ .tbar label[for="pl1"], #pl2:checked ~ .tbar label[for="pl2"], #pl3:checked ~ .tbar label[for="pl3"] { background: var(--btn); border-color: var(--btn); color: var(--on); }
+#pl1:focus-visible ~ .tbar label[for="pl1"], #pl2:focus-visible ~ .tbar label[for="pl2"], #pl3:focus-visible ~ .tbar label[for="pl3"] { outline: 3px solid var(--cy); outline-offset: 3px; }
+.tw { overflow-x: auto; border: 1px solid var(--line); border-radius: 22px; background: var(--card); }
+table { width: 100%; border-collapse: collapse; min-width: 520px; }
+th, td { text-align: left; padding: 18px 22px; border-bottom: 1px solid var(--line); }
+th { color: var(--cy); font-size: 14px; font-weight: 800; }
+tr:last-child td { border-bottom: 0; }
+td { color: var(--mut); }
+td:first-child { color: var(--txt); font-weight: 800; }
+.upd { color: var(--mut2); font-size: 14px; margin: 16px 0 0; }
+details { background: var(--card); border: 1px solid var(--line); border-radius: 18px; margin-bottom: 14px; }
+summary { cursor: pointer; padding: 18px 24px; min-height: 44px; font-weight: 800; font-size: 17px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: '+'; color: var(--acc); font-size: 28px; line-height: 1; transition: transform 0.25s ease; }
+details[open] summary::after { transform: rotate(45deg); }
+details p { margin: 0; padding: 0 24px 22px; color: var(--mut); line-height: 1.6; }
+.final { text-align: center; padding: 96px 0; }
+.final .sub { margin: 0 auto 36px; }
+.row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.hint { color: var(--mut2); font-size: 15px; margin-top: 20px; }
+.qr { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 44px; }
+.qr img { width: 176px; height: 176px; border-radius: 18px; border: 6px solid #fff; background: #fff; image-rendering: pixelated; }
+.qr p { margin: 0; color: var(--mut2); font-size: 15px; }
+.foot { border-top: 1px solid var(--line2); padding: 28px 0 40px; color: var(--mut2); font-size: 14px; line-height: 1.6; text-align: center; }
+.fab { display: none; }
+@keyframes up {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes pop {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+@keyframes ping {
+  0% { transform: scale(0.7); opacity: 0.8; }
+  100% { transform: scale(1.25); opacity: 0; }
+}
+@keyframes halo {
+  from { transform: scale(1); opacity: 0.7; }
+  to { transform: scale(1.2, 1.55); opacity: 0; }
+}
+@keyframes type {
+  to { clip-path: inset(0 0 0 0); }
+}
+@keyframes blink {
+  to { visibility: hidden; }
+}
+@keyframes scroll {
+  to { transform: translateX(-50%); }
+}
+@media (min-width: 901px) {
+  @supports (animation-timeline: view()) {
+    .rv { animation: up linear both; animation-timeline: view(); animation-range: entry 0% cover 28%; }
+  }
+}
+@media (max-width: 900px) {
+  .nav { display: none; }
+  .hero { padding: 36px 0 40px; }
+  .hero .wrap { grid-template-columns: 1fr; text-align: center; }
+  .lead { margin-left: auto; margin-right: auto; }
+  .art { order: -1; width: 240px; }
+  .phone { animation: none; }
+  .cards, .cards.c3 { grid-template-columns: 1fr 1fr; }
+  .steps { grid-template-columns: 1fr; }
+  .note, .media, .phone-wrap { grid-template-columns: 1fr; }
+  .phone-wrap { gap: 36px; text-align: center; }
+  .sec { padding: 64px 0; }
+  .dl { grid-template-columns: 1fr 1fr; }
+  .qr { display: none; }
+  .fab { display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)); background: var(--bg); border-top: 1px solid var(--line2); animation: up 0.8s ease 1s both; }
+  .fab .btn { width: 100%; box-sizing: border-box; min-height: 52px; }
+  .foot { padding-bottom: 104px; }
+}
+@media (max-width: 560px) {
+  .cards, .cards.c3, .dl { grid-template-columns: 1fr; }
+  .logo { font-size: 13px; }
+  .btn.small { display: none; }
+  .btn.big { width: 100%; box-sizing: border-box; padding: 0 20px; }
+  .term .bd { font-size: 13px; padding: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .shell * { animation: none !important; transition: none !important; }
+  .ln { clip-path: none; }
+}
+@media (hover: none) {
+  .card:hover, .dl a:hover, .btn:hover, .shots img:hover { transform: none; box-shadow: none; }
+}
+</style>
+
+</head>
+<body>
+<div class="page">
+<input class="tin" type="checkbox" id="th" aria-label="Светлая тема">
+<div class="shell">
+<div class="grid"></div>
+<header class="bar">
+<div class="wrap">
+<a class="brand" href="#top"><img src="assets/logo96.jpg" alt="Логотип канала" width="40" height="40"><span class="logo">Все VPN <b>ОБХОДЫ</b></span></a>
+<nav class="nav"><a href="#channel">О канале</a><a href="#download">Скачать</a><a href="#services">Сервисы</a><a href="#faq">Вопросы</a></nav>
+<div class="tools">
+<label class="tg" for="th" title="Сменить тему"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg></label>
+<a class="btn small" href="https://t.me/obhod_kirya" target="_blank" rel="noopener">Открыть канал</a>
+</div>
+</div>
+</header>
+<section class="hero" id="top">
+<div class="wrap">
+<div>
+<div class="tag">Telegram-канал</div>
+<h1><span>Доступ без</span><span>ограничений</span></h1>
+<p class="lead">Инструкции, новости и подборки сервисов для обхода блокировок и белых списков. Коротко, по шагам и без воды.</p>
+<div class="cta"><a class="btn big pulse" href="https://t.me/obhod_kirya" target="_blank" rel="noopener">Подписаться в Telegram</a></div>
+</div>
+<div class="art">
+<svg class="s3" viewBox="0 0 380 380" aria-hidden="true"><circle class="rg" cx="190" cy="190" r="120"/></svg>
+<svg class="s1" viewBox="0 0 380 380" aria-hidden="true"><circle class="o1" cx="190" cy="190" r="165"/><circle cx="190" cy="25" r="10" fill="#3cc8ff"/></svg>
+<svg class="s2" viewBox="0 0 380 380" aria-hidden="true"><circle class="o2" cx="190" cy="190" r="140"/><circle cx="330" cy="190" r="8" fill="#ff9620"/></svg>
+<div class="lg"><img src="assets/logo240.jpg" alt="Логотип канала Все VPN ОБХОДЫ" width="240" height="240"></div>
+</div>
+<div class="term" aria-label="Анимация подключения">
+<div class="hd"><i></i><i></i><i></i></div>
+<div class="bd"><span class="ln">&gt; подключение к серверу...</span><span class="ln">&gt; маршрут найден</span><span class="ln">&gt; трафик замаскирован</span><span class="ln">&gt; защищено, доступ открыт<span class="cur"></span></span></div>
+</div>
+</div>
+</section>
+<div class="mq" aria-hidden="true"><div class="mq-track"><span>Happ</span><span>INCY</span><span>Белые списки</span><span>Инструкции</span><span>Новости</span><span>Подборки сервисов</span><span>Happ</span><span>INCY</span><span>Белые списки</span><span>Инструкции</span><span>Новости</span><span>Подборки сервисов</span><span>Happ</span><span>INCY</span><span>Белые списки</span><span>Инструкции</span><span>Новости</span><span>Подборки сервисов</span><span>Happ</span><span>INCY</span><span>Белые списки</span><span>Инструкции</span><span>Новости</span><span>Подборки сервисов</span></div></div>
+<section class="sec" id="channel">
+<div class="wrap">
+<h2 class="rv">Что в канале</h2>
+<p class="sub rv">Всё, что нужно, чтобы разобраться и настроить за несколько минут.</p>
+<div class="cards">
+<div class="card rv"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h13a2 2 0 0 1 2 2v12H6a2 2 0 0 1-2-2z"/><path d="M8 9h7M8 13h7"/></svg></div><h3>Новости</h3><p>Что вернулось в магазины приложений, что перестало работать и какие обновления вышли.</p></div>
+<div class="card rv"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/></svg></div><h3>Инструкции</h3><p>Пошаговая настройка Happ, INCY и других клиентов на iPhone, Android и компьютере.</p></div>
+<div class="card rv"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 10h18M9 10v10"/></svg></div><h3>Подборки</h3><p>Список VPN-сервисов с пробным и платным вариантом, чтобы выбрать без лишних трат.</p></div>
+<div class="card rv"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6a4 4 0 0 0-5 5l-6 6 3 3 6-6a4 4 0 0 0 5-5l-3 3-2-2z"/></svg></div><h3>Разборы проблем</h3><p>Пропало соединение? Пошаговые проверки и рабочие варианты, что попробовать дальше.</p></div>
+</div>
+</div>
+</section>
+<section class="sec alt">
+<div class="wrap phone-wrap">
+<div class="rv"><div class="phone"><div class="nt"></div><div class="screen"><img src="assets/post560.jpg" alt="Пример поста из канала про Happ и INCY" loading="lazy" decoding="async"></div></div></div>
+<div class="rv"><h2>Канал изнутри</h2><p class="sub">Так выглядят посты: без воды, с конкретными приложениями и причинами, почему именно они. Загляни и оцени сам.</p><a class="btn big" href="https://t.me/obhod_kirya" target="_blank" rel="noopener">Читать канал</a></div>
+</div>
+</section>
+<section class="sec">
+<div class="wrap">
+<h2 class="rv">Как начать</h2>
+<p class="sub rv">Три шага, и ты в теме.</p>
+<div class="steps">
+<div class="step rv"><div class="num">1</div><h3>Подпишись</h3><p>Нажми кнопку и открой канал в Telegram.</p></div>
+<div class="step rv"><div class="num">2</div><h3>Выбери инструкцию</h3><p>Нужные руководства собраны в закрепе канала.</p></div>
+<div class="step rv"><div class="num">3</div><h3>Настрой и подключись</h3><p>Следуй шагам: обычно это занимает пару минут.</p></div>
+</div>
+</div>
+</section>
+<section class="sec alt">
+<div class="wrap note">
+<div class="rv"><h2>Что такое белые списки</h2></div>
+<div class="rv"><p>Это режим ограничений, при котором открываются только сайты и сервисы из разрешённого перечня. Обычные способы подключения в таких условиях часто дают сбой.</p><p>В канале разбираем, какие клиенты и схемы подключения устойчивее и как их настроить.</p></div>
+</div>
+</section>
+<section class="sec">
+<div class="wrap">
+<h2 class="rv">Как настроить Happ за 3 минуты</h2>
+<p class="sub rv">Короткое видео и четыре шага. Названия кнопок могут отличаться в разных версиях приложения.</p>
+<div class="media">
+<div class="rv"><video controls playsinline preload="metadata" src="assets/happ-instruction.mp4" aria-label="Видеоинструкция по настройке Happ"></video></div>
+<div class="shots rv">
+<img src="assets/step1.jpg" alt="Шаг 1: установи Happ из официального источника" loading="lazy" decoding="async">
+<img src="assets/step2.jpg" alt="Шаг 2: возьми ссылку-подписку у сервиса" loading="lazy" decoding="async">
+<img src="assets/step3.jpg" alt="Шаг 3: добавь подписку в Happ" loading="lazy" decoding="async">
+<img src="assets/step4.jpg" alt="Шаг 4: выбери сервер и подключись" loading="lazy" decoding="async">
+</div>
+</div>
+</div>
+</section>
+<section class="sec alt" id="download">
+<div class="wrap">
+<h2 class="rv">Скачай Happ</h2>
+<p class="sub rv">Только официальные источники. Выбери свою платформу и следуй шагам.</p>
+<div class="dl rv">
+<a href="https://apps.apple.com/us/app/happ-proxy-utility/id6504287215" target="_blank" rel="noopener"><small>iPhone и iPad</small><b>App Store (глобальный)</b></a>
+<a href="https://apps.apple.com/ru/app/happ-proxy-utility/id6783623643" target="_blank" rel="noopener"><small>iPhone и iPad</small><b>App Store (российский)</b></a>
+<a href="https://play.google.com/store/apps/details?id=com.happproxy" target="_blank" rel="noopener"><small>Android</small><b>Google Play</b></a>
+<a href="https://www.happ.su/main/ru" target="_blank" rel="noopener"><small>Windows, macOS, Linux</small><b>Сайт happ.su</b></a>
+</div>
+<div class="tabs rv">
+<input class="tin" type="radio" name="plat" id="pl1" aria-label="iPhone" checked>
+<input class="tin" type="radio" name="plat" id="pl2" aria-label="Android">
+<input class="tin" type="radio" name="plat" id="pl3" aria-label="Компьютер">
+<div class="tbar"><label for="pl1">iPhone</label><label for="pl2">Android</label><label for="pl3">ПК</label></div>
+<div class="tp p1"><h3>Настройка на iPhone</h3><ol><li>Установи Happ из App Store по кнопке выше.</li><li>Скопируй ссылку-подписку у выбранного сервиса.</li><li>В приложении нажми «+» и вставь ссылку или отсканируй QR.</li><li>Разреши создание VPN-конфигурации и подключись.</li></ol><p>Если приложение не находится в поиске App Store, открывай его по кнопке выше.</p></div>
+<div class="tp p2"><h3>Настройка на Android</h3><ol><li>Установи Happ из Google Play или с сайта happ.su.</li><li>Скопируй ссылку-подписку у выбранного сервиса.</li><li>В приложении нажми «+» и вставь ссылку или отсканируй QR.</li><li>Выбери сервер и нажми кнопку подключения.</li></ol><p>Не ставь APK из случайных каналов, только с официального сайта.</p></div>
+<div class="tp p3"><h3>Настройка на компьютере</h3><ol><li>Скачай версию для своей системы с сайта happ.su.</li><li>Скопируй ссылку-подписку у выбранного сервиса.</li><li>В приложении нажми «+» и вставь ссылку.</li><li>Выбери сервер и подключись.</li></ol><p>Названия кнопок могут отличаться в разных версиях.</p></div>
+</div>
+</div>
+</section>
+<section class="sec" id="services">
+<div class="wrap">
+<h2 class="rv">Как мы выбираем сервисы</h2>
+<p class="sub rv">Полный список сервисов с условиями и ценами всегда в закрепе канала.</p>
+<div class="cards c3 sm">
+<div class="card rv"><h3>Условия понятны</h3><p>Есть пробный период или ясные условия оплаты.</p></div>
+<div class="card rv"><h3>Прозрачная цена</h3><p>Стоимость указана заранее, без скрытых платежей.</p></div>
+<div class="card rv"><h3>Работает с Happ</h3><p>Подписка добавляется в клиент по ссылке или QR.</p></div>
+<div class="card rv"><h3>Стабильное соединение</h3><p>Подключение не пропадает в самый неудобный момент.</p></div>
+</div>
+<div class="rv" style="margin-top: 32px"><a class="btn" href="https://t.me/obhod_kirya" target="_blank" rel="noopener">Весь список в закрепе канала</a></div>
+</div>
+</section>
+<section class="sec alt" id="faq">
+<div class="wrap">
+<h2 class="rv">Частые вопросы</h2>
+<p class="sub rv">Ответы на то, о чём спрашивают чаще всего.</p>
+<details class="rv"><summary>Что такое Happ?</summary><p>Это бесплатный клиент для подключения. Сам VPN он не продаёт: доступ работает по ссылке-подписке от выбранного сервиса или по собственному серверу.</p></details>
+<details class="rv"><summary>Нужен ли платный VPN?</summary><p>Для работы Happ нужна подписка или свой сервер. У части сервисов есть пробный период, условия у каждого свои, их смотри в подборке в закрепе.</p></details>
+<details class="rv"><summary>Не подключается, что делать?</summary><p>Смени сервер, обнови подписку в приложении и проверь, что установлена последняя версия. Не помогло: напиши в канале, какое у тебя устройство и какая ошибка.</p></details>
+<details class="rv"><summary>Где скачать Happ?</summary><p>Только из официальных источников: App Store, Google Play или сайт happ.su. Не ставь APK из случайных каналов и остерегайся «официальных Happ VPN».</p></details>
+<details class="rv"><summary>Можно ли делиться ссылкой подписки?</summary><p>Лучше нет: ссылка личная. Если выложить её в открытый чат, ею могут воспользоваться посторонние.</p></details>
+</div>
+</section>
+<section class="final">
+<div class="wrap">
+<h2 class="rv">Заходи в канал</h2>
+<p class="sub rv">Свежие инструкции и новости выходят регулярно.</p>
+<div class="row rv"><a class="btn big pulse" href="https://t.me/obhod_kirya" target="_blank" rel="noopener">Перейти в Telegram</a><a class="btn big ghost" href="https://t.me/share/url?url=https%3A%2F%2Ft.me%2Fobhod_kirya&text=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4%20%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%BE%D0%BA" target="_blank" rel="noopener">Поделиться каналом</a></div>
+<p class="hint rv">Нужные инструкции собраны в закрепе канала.</p>
+<div class="qr rv"><img src="assets/qr.png" alt="QR-код канала t.me/obhod_kirya" loading="lazy" decoding="async"><p>Открыл на компьютере? Наведи камеру телефона на QR-код.</p></div>
+</div>
+</section>
+<footer class="foot">
+<div class="wrap">Материалы канала носят информационный характер. Используйте инструменты в соответствии с законодательством вашей страны.</div>
+</footer>
+<div class="fab"><a class="btn big" href="https://t.me/obhod_kirya" target="_blank" rel="noopener">Подписаться в Telegram</a></div>
+</div>
+</div>
+
+</body>
+</html>
